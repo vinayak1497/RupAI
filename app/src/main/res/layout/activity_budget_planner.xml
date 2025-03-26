@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BudgetPlannerActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Total monthly Income after Tax Deduction "
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etOtherIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Extra Income from other sources"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etMedicalExpenses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Medical Expenses"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etGroceries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Groceries Expense"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etRent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Rent / Mortgage / EMI"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etEducation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Education Fees and Insurance"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etSavings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Savings per Month"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/btnGenerateBudget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Generate Budget Plan"
+                android:backgroundTint="@color/purple_500"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/tvBudgetResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Budget Plan will appear here..."
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/ai_message_bg"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

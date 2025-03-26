@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "984328883621",
+    "project_id": "andriodfinvoice",
+    "storage_bucket": "andriodfinvoice.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984328883621:android:90962f589b68e9bb11ac4c",
+        "android_client_info": {
+          "package_name": "com.example.finvoice"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBlq0-eSBMgOCKdNfb6-k9q9vJchg2YPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
