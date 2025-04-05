@@ -1,6 +1,5 @@
 # 💰 RupAI – Rural Financial Literacy Assistant 📱💡
 ![RupAILogo](https://github.com/user-attachments/assets/65db2504-4f31-46bd-8b41-4e7b8ee6d481)
-(https://your-image-url-or-remove-this-if-you-don't-host-it)
 
 **RupAI** (short for *Rupayya* + *AI*) is a mobile Android application built as part of the **Google Solution Challenge 2025**. It aims to improve **financial literacy** and empower **rural communities in India** by providing AI-powered tools and interactive features in a simple, modern interface.
 
