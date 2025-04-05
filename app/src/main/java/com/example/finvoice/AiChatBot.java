@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.speech.tts.TextToSpeech;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.widget.Toast;
 
 import com.google.ai.client.generativeai.GenerativeModel;
 import com.google.ai.client.generativeai.type.Content;
@@ -75,7 +76,8 @@ public class AiChatBot extends AppCompatActivity implements ChatAdapter.OnItemCl
     }
 
     private void speakOut(String text) {
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, null);
+        String processedText = text.replaceAll("[\\p{Punct}]", ""); // Remove all punctuation
+        tts.speak(processedText, TextToSpeech.QUEUE_FLUSH, null, null);
     }
 
     private void copyToClipboard(String text) {
@@ -102,13 +104,14 @@ public class AiChatBot extends AppCompatActivity implements ChatAdapter.OnItemCl
     public void onCopyClick(int position) {
         ChatMessage message = chatMessages.get(position);
         copyToClipboard(message.getMessage());
+        Toast.makeText(AiChatBot.this, "Copied to clipboard", Toast.LENGTH_SHORT).show();
     }
 
     private void generateText(String prompt) {
         GenerativeModel model = new GenerativeModel(MODEL_NAME, API_KEY);
 
         // 🔹 Dynamic & Structured Prompt for Finance Accuracy
-        String systemPrompt = "You are a financial assistant specializing in personal finance, investments, SIP, mutual funds, banking, stock market, and Indian financial regulations. Always provide fact-based answers and avoid speculation. If uncertain, say 'I'm not sure, please consult a financial expert.'";
+        String systemPrompt = "You are a financial assistant specializing in personal finance, investments, SIP, mutual funds, banking, stock market, and Indian financial regulations. Always provide fact-based answers and avoid speculation. If uncertain, say 'I'm not sure, please consult a financial expert. Remeber the user is from rural community and hence use simple language while having Humanly conversion. Keep it short and simple. Don't use bold or italic in response";
 
         String finalPrompt = systemPrompt + "\nUser: " + prompt;
 
@@ -168,7 +171,7 @@ public class AiChatBot extends AppCompatActivity implements ChatAdapter.OnItemCl
                 "80C deduction", "capital gains tax", "property tax", "wealth tax", "corporate tax", "pension", "PPF",
                 "Public Provident Fund", "NPS", "National Pension System", "EPF", "Employee Provident Fund", "annuity", "gratuity",
                 "inflation", "deflation", "recession", "GDP", "Gross Domestic Product", "fiscal policy", "monetary policy",
-                "repo rate", "reverse repo rate", "MF", "FD"
+                "repo rate", "reverse repo rate", "MF", "FD", "Full form", "emi"
         };
 
         for (String keyword : financeKeywords) {
@@ -207,3 +210,4 @@ public class AiChatBot extends AppCompatActivity implements ChatAdapter.OnItemCl
         return false;
     }
 }
+

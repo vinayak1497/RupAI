@@ -11,28 +11,33 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp"
+        android:layout_marginTop="35dp"
         android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SIP vs FD Comparison"
-            android:textSize="24sp"
+            android:text="SIP or Fixed Deposit? Let's Calculate each!!"
+            android:textSize="27sp"
             android:textStyle="bold"
-            android:gravity="center"
-            android:paddingBottom="20dp" />
+            android:layout_marginBottom="15dp"
+            />
 
         <EditText
             android:id="@+id/investmentAmount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/edittext_background_sip"
             android:hint="Monthly Investment (₹)"
             android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/interestRate"
             android:layout_width="match_parent"
+            android:background="@drawable/edittext_background_sip"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
             android:hint="Expected SIP Return Rate (%)"
             android:inputType="numberDecimal" />
 
@@ -56,6 +61,7 @@
             android:id="@+id/calculateButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
             android:text="Compare SIP vs FD"
             android:layout_marginTop="10dp"/>
 

@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BudgetPlannerActivity">
+    tools:context=".PurchaseAnalyzerActivity">
 
     <ScrollView
-        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp"
@@ -22,92 +21,93 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Plan your monthly spending with ease!"
+                android:text="Should I buy it or not?"
                 android:textSize="27sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="20dp"
                 />
 
             <EditText
                 android:id="@+id/etIncome"
                 android:layout_width="match_parent"
-                android:background="@drawable/rounded_edittext"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp"
-                android:hint="Total monthly Income after Tax Deduction "
+                android:hint="Enter Monthly Income (₹)"
+                android:background="@drawable/rounded_edittext"
                 android:inputType="numberDecimal" />
 
             <EditText
-                android:id="@+id/etOtherIncome"
+                android:id="@+id/productDetail"
                 android:layout_width="match_parent"
-                android:background="@drawable/rounded_edittext"
                 android:layout_height="wrap_content"
-                android:hint="Extra Income from other sources"
-                android:inputType="numberDecimal" />
+                android:hint="What you want to buy?"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginTop="12dp"/>
 
             <EditText
-                android:id="@+id/etMedicalExpenses"
-                android:background="@drawable/rounded_edittext"
+                android:id="@+id/etCost"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp"
-
-                android:hint="Medical Expenses"
-                android:inputType="numberDecimal" />
-
-            <EditText
-                android:id="@+id/etGroceries"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:hint="Enter Product Cost (₹)"
                 android:background="@drawable/rounded_edittext"
-                android:hint="Groceries Expense"
-                android:inputType="numberDecimal" />
-
-            <EditText
-                android:id="@+id/etRent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded_edittext"
-                android:layout_marginVertical="10dp"
-                android:hint="Rent / Mortgage / EMI"
-                android:inputType="numberDecimal" />
-
-            <EditText
-                android:id="@+id/etEducation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded_edittext"
-                android:hint="Education Fees and Insurance"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:layout_marginTop="12dp" />
 
             <EditText
                 android:id="@+id/etSavings"
-                android:background="@drawable/rounded_edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Savings per Month"
-                android:layout_marginVertical="10dp"
-                android:inputType="numberDecimal" />
+                android:background="@drawable/rounded_edittext"
+                android:hint="Enter Available Savings (₹)"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/etMonthlyExpenses"
+                android:layout_width="match_parent"
+                android:background="@drawable/rounded_edittext"
+                android:layout_height="wrap_content"
+                android:hint="Enter Monthly Expenses (₹)"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/etProductLifespan"
+                android:layout_width="match_parent"
+                android:background="@drawable/rounded_edittext"
+                android:layout_height="wrap_content"
+                android:hint="Expected Product Lifespan (in years)"
+                android:inputType="number"
+                android:layout_marginTop="12dp" />
+
+            <Spinner
+                android:id="@+id/spUrgency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext"
+
+                android:layout_marginTop="12dp" />
+
 
             <Button
-                android:id="@+id/btnGenerateBudget"
+                android:id="@+id/btnAnalyze"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Generate Budget Plan"
+                android:text="Analyze Purchase"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/button_bg"
-                android:textColor="@android:color/white"
-                android:layout_marginTop="16dp" />
+                android:textColor="@android:color/white" />
 
             <TextView
-                android:id="@+id/tvBudgetResult"
+                android:id="@+id/tvAdviceResult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Your Budget Plan will appear here..."
+                android:text="Advice will appear here..."
                 android:padding="12dp"
                 android:textSize="16sp"
                 android:textColor="@android:color/black"
                 android:background="@drawable/ai_message_bg"
-                android:visibility="gone" />
+                android:visibility="gone"
+                android:layout_marginTop="16dp" />
 
         </LinearLayout>
     </ScrollView>

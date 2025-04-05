@@ -71,7 +71,7 @@ public class BudgetPlannerActivity extends AppCompatActivity {
                 + "Education Fees & Insurance: ₹" + education + "\n"
                 + "Monthly Savings: ₹" + savings + "\n\n"
                 + "💰 **Task:** Based on the user's financial details, generate a personalized budget plan. "
-                + "Ensure the response is structured with key financial insights and savings strategies.";
+                + "Ensure the response is structured with key financial insights and savings strategies. Give reply with simple language ensuring that the user is from rural community. Don't use bold and italic in response. Keep response simple and short. ";
 
         // 🔹 Call Gemini AI
         callGeminiAPI(prompt);

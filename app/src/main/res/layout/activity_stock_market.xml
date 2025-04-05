@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/backgroundColor"
+    android:layout_width="match_parent"
+    android:layout_marginTop="35dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Track market trends in real-time!"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"
+        />
+
+    <EditText
+        android:id="@+id/stockSymbol"
+        android:hint="Enter stock symbol (e.g., AAPL)"
+
+        android:background="@drawable/lavender_border"
+        android:padding="12dp"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/fetchStockButton"
+        android:text="Get Stock Data"
+        android:background="@drawable/button_bg"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/trendText"
+        android:text="📉 Trend Summary"
+        android:textStyle="bold"
+        android:textColor="@color/textColor"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/stockRecyclerView"
+        android:background="@drawable/rounded_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"/>
+</LinearLayout>

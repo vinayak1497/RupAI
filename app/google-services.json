@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "984328883621",
+    "firebase_url": "https://andriodfinvoice-default-rtdb.firebaseio.com",
     "project_id": "andriodfinvoice",
     "storage_bucket": "andriodfinvoice.firebasestorage.app"
   },

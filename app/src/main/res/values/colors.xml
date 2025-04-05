@@ -11,4 +11,11 @@
     <color name="dull_yellow">#FF9B0B</color>
     <color name="green">#03AB03</color>
     <color name="red">#C80303</color>
+    <color name="teal_700">#FF03A1A1</color>
+    <color name="primaryColor">#673AB7</color>  <!-- Purple -->
+    <color name="primaryDarkColor">#512DA8</color>
+    <color name="accentColor">#FF4081</color>
+    <color name="backgroundColor">#F3F3F3</color>  <!-- Light Gray -->
+    <color name="textColor">#212121</color>
+    <color name="secondaryTextColor">#757575</color>
 </resources>
